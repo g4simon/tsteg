@@ -6,6 +6,10 @@ python 版本的zsteg，至于为什么叫tsteg，咱也不知道，咱也不敢
 
 强烈感谢@cheyenne @阿狸 师傅们对算法和脚本思路的无私帮助。
 
+可能有非常多的bug，欢迎大家提bug。
+
+目前由于个人精力有限, -a 参数并没有很多的策略，以后会慢慢加的。。
+
 # environment
 
 只能在python3 linux 环境下运行。
