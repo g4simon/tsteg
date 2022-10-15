@@ -9,6 +9,7 @@ python 版本的zsteg，至于为什么叫tsteg，咱也不知道，咱也不敢
 # install
 
 `git colne https://github.com/g4simon/tsteg`
+
 `python3 -m pip install -r requirements.txt`
 
 # usage
