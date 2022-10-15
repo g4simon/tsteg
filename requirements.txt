@@ -1,0 +1,4 @@
+hexdump
+numpy
+argparse
+binwalk
