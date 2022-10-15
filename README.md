@@ -6,9 +6,14 @@ python 版本的zsteg，至于为什么叫tsteg，咱也不知道，咱也不敢
 
 强烈感谢@cheyenne @阿狸 师傅们对算法和脚本思路的无私帮助。
 
+# environment
+
+只能在python3 linux 环境下运行。
+
+
 # install
 
-`git colne https://github.com/g4simon/tsteg`
+`git clone https://github.com/g4simon/tsteg`
 
 `python3 -m pip install -r requirements.txt`
 
