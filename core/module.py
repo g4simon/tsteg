@@ -16,8 +16,10 @@ class IDENTIFIER(object):
 		open(self.tempfile_name,'wb').write(bytes_str)
 		self.bytes_str=bytes_str
 		self.result={}
-		if self.VERBOSE:
+		if self.VERBOSE or self.FORCE:
 			self.result['hexdump']=hexdump.hexdump(bytes_str,result='return').split('\n')
+		if self.FORCE:
+			self.result['force extract']=[(0,'show first 100 bytes')]
 
 	def check_strings(self):
 		result_text=os.popen(f'strings -td -{self.STRINGLENGTH} {self.tempfile_name}').read()

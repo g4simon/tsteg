@@ -7,7 +7,7 @@
 # @email: g4_simon@foxmail.com
 # 菜，轻喷
 # 为方便用户使用，在参数上“尽量”和zsteg保持一致，至于为什么叫tsteg，咱也不知道，咱也不敢问。
-# 目前只完成了lsb的部分，webstego和其他隐写还在继续做
+# 目前只完成了lsb的部分，wbstego和其他隐写还在继续做(wbstego可能要鸽了，不太会)
 # 强烈感谢@cheyenne @阿狸 师傅们对算法和脚本思路的无私帮助
 
 DEBUG=False
@@ -19,7 +19,7 @@ from core.tsteg import CONFIGURE,TSTEG
 
 if __name__ == "__main__":
 	#Entrypoint
-	Parser = argparse.ArgumentParser(#description='最痛苦的时什么呢，你恰巧有那么一点天赋，够你去觊觎天才们那片殿堂，却不够你进入。你在门前徘徊，隐隐约约看到殿堂内透出的光，却敲不开那扇门。你颓然而坐，以为这就是人世间最大的遗憾，却隐隐约约听到殿堂内传来一声叹息：我好菜啊',
+	Parser = argparse.ArgumentParser(#description='最痛苦的是什么呢，你恰巧有那么一点天赋，够你去觊觎天才们那片殿堂，却不够你进入。你在门前徘徊，隐隐约约看到殿堂内透出的光，却敲不开那扇门。你颓然而坐，以为这就是人世间最大的遗憾，却隐隐约约听到殿堂内传来一声叹息：我好菜啊',
 						)
 	
 	Parser.add_argument('filename',
@@ -101,9 +101,13 @@ if __name__ == "__main__":
 						dest='STRINGLENGTH',
 						action='store',
 						type=int,
-						default=10,
-						help='检测字符串长度.')	
-
+						default=15,
+						help='检测字符串长度(default:15).')	
+	Parser.add_argument('--force',
+						dest='FORCE',
+						action='store_true',
+						default=False,
+						help='强制模式，不管有没有检测到信息，都显示结果.')	
 	Parser.add_argument('-v', '--verbose',
 						dest='VERBOSE',
 						action='store_true',
