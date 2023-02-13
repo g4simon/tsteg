@@ -49,7 +49,8 @@ class CONFIGURE(object):
 		返回值：
 		None
 		'''
-		self.BINDIR=os.getcwd()+os.sep+'bin'+os.sep
+		self.BINDIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "bin") + os.sep
+
 		for (k, v) in kwargs.items():
 			setattr(self, k, v)
 		self.DISPLAY=Display(**vars(self))
